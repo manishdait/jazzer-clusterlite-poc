@@ -9,7 +9,7 @@ public class ParserFuzzTest {
     String input = dataProvider.consumeRemainingAsString();
     try {
       TestParser.parse(input);
-    } catch (IllegalArgumentException e) {
+    } catch (IllegalStateException e) {
       // Ignore expected validation exceptions so the fuzzer keeps running
     }
     // IllegalStateException is not caught, so Jazzer will flag it as a crash
