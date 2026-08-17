@@ -20,7 +20,6 @@ PROJECT_JARS="jazzer-poc.jar"
 # Jazzer API.
 
 export JAZZER_API_PATH=$(find target/dependency -name "*.jar" | paste -sd ":" -)
-
 BUILD_CLASSPATH=$(echo $PROJECT_JARS | xargs printf -- "$OUT/%s:"):$JAZZER_API_PATH
 
 RUNTIME_CLASSPATH="\$this_dir:\$this_dir/jazzer-poc.jar"
