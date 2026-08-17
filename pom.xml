@@ -23,4 +23,8 @@
       <scope>compile</scope>
     </dependency>
   </dependencies>
+
+  <build>
+    <finalName>jazzer-poc-${version}</finalName>
+  </build>
 </project>
