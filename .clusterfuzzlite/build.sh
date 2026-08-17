@@ -24,7 +24,7 @@ BUILD_CLASSPATH=$(echo $PROJECT_JARS | xargs printf -- "$OUT/%s:"):$JAZZER_API_P
 
 RUNTIME_CLASSPATH="\$this_dir:\$this_dir/jazzer-poc.jar"
 
-for fuzzer in $(find $SRC -name '*Fuzzer.java' -o -name "*FuzzTest.java"); do
+for fuzzer in $(find $SRC -name '*Fuzzer.java'); do
   fuzzer_basename=$(basename -s .java $fuzzer)
 
   # Extract the package statement if present
