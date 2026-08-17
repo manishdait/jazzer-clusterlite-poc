@@ -5,7 +5,7 @@ import com.code_intelligence.jazzer.junit.FuzzTest;
 
 public class ParserFuzzTest {
   @FuzzTest(maxDuration = "1m")
-  void fuzzParseInput(FuzzedDataProvider dataProvider) {
+  public static void fuzzParseInput(FuzzedDataProvider dataProvider) {
     String input = dataProvider.consumeRemainingAsString();
     try {
       TestParser.parse(input);
