@@ -7,6 +7,11 @@ public class ParserFuzzTest {
   @FuzzTest(maxDuration = "1m")
   void fuzzParseInput(FuzzedDataProvider dataProvider) {
     String input = dataProvider.consumeRemainingAsString();
-    TestParser.parse(input);
+    try {
+      TestParser.parse(input);
+    } catch (IllegalArgumentException e) {
+      // Ignore expected validation exceptions so the fuzzer keeps running
+    }
+    // IllegalStateException is not caught, so Jazzer will flag it as a crash
   }
 }
