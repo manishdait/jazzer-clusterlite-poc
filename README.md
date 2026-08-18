@@ -7,7 +7,7 @@ A Jazzer and ClusterFuzzLite Java (PoC) demonstrating fuzz testing for Java appl
 This repository demonstrates how to discover hidden edge cases, unhandled exceptions, and security vulnerabilities in Java parsers before they reach production.
 
 - Fuzzing Engine: Jazzer
-- Runtime Target: Java 21
+- Runtime Target: Java 17
 - Build System: Apache Maven 
 - Continuous Integration: GitHub Actions + ClusterFuzzLite
 
