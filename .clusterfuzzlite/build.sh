@@ -1,4 +1,10 @@
+#!/bin/bash -eu
+
 # Step 1: Build the project
+
+# Ensure Java 21 is active during build step
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
+export PATH="$JAVA_HOME/bin:$PATH"
 
 # Build the project .jar as usual, e.g. using Maven.
 mvn package
